@@ -7,8 +7,12 @@ vite： vue3 脚手架
 * composition-api：https://composition-api.vuejs.org/zh/api.html#setup
 * 迁移至 vue3：https://v3.vuejs.org/guide/migration/introduction.html
 
-
 ### vue3 简说
 * 项目起步
 * 常用 api
 * ref VS reactive
+
+### 目标
+* javascript - typescript
+* vue2 -> vue3
+* vue webpack -> vue vite
