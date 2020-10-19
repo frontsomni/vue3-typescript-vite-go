@@ -44,7 +44,6 @@ export default defineComponent({
       let value = Math.random()
       list.unshift({id: value, value: value.toString().slice(-8)})
     }
-    computed
     return {
       selectedIndex,
       list,

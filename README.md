@@ -1,9 +1,14 @@
 # vite + vue3 + typescript
+vite： vue3 脚手架
 
 ### 参考文档
-* https://github.com/vitejs/vite#typescript
+* vue3：https://v3.vuejs.org/api/computed-watch-api.html#computed
+* vite：https://github.com/vitejs/vite#typescript
+* composition-api：https://composition-api.vuejs.org/zh/api.html#setup
+* 迁移至 vue3：https://v3.vuejs.org/guide/migration/introduction.html
 
 
-### 常用 Api
-* unref 对 ref 对象进行拆包 `un = unpacking`
-* ref 对于 xx 创建一个指针包装对象 `ref 本身表示指针`
+###
+* 项目起步
+* 常用 api
+* ref VS reactive
