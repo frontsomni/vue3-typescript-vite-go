@@ -15,4 +15,4 @@ vite： vue3 脚手架
 ### 目标
 * javascript - typescript
 * vue2 -> vue3
-* vue webpack -> vue vite
+* webpack vue  -> vite vue
