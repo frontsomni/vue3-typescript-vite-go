@@ -12,15 +12,18 @@
       </li>
     </ul>
     <p>当前数值为：{{selectedIndex}}</p>
+    <button @click="onAddItem">添加 item</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from 'vue'
+import { computed, defineComponent, getCurrentInstance, isProxy, isRef, onMounted, reactive, ref, toRef, toRefs, unref, watch, watchEffect } from 'vue'
+
 interface TabItem {
   id: number
   value: string
 }
+
 export default defineComponent({
   setup() {
     const selectedIndex = ref(0)
@@ -37,11 +40,16 @@ export default defineComponent({
     const onClickTab = (index) => {
       selectedIndex.value = index
     }
-
+    const onAddItem = () => {
+      let value = Math.random()
+      list.unshift({id: value, value: value.toString().slice(-8)})
+    }
+    computed
     return {
       selectedIndex,
       list,
-      onClickTab
+      onClickTab,
+      onAddItem,
     }
   }
 })
