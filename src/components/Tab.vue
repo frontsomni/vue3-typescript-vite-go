@@ -1,6 +1,5 @@
 <template>
   <div class="tab" ref="tab">
-    <h3>Tab.vue</h3>
     <ul>
       <li
         v-for="(item, i) of list"
@@ -8,62 +7,89 @@
         @click="onClickTab(i)"
         :class="i === selectedIndex && 'selected'"
       >
-      item • {{item.value}}
+        item • {{ item.value }}
       </li>
     </ul>
-    <p>当前数值为：{{selectedIndex}}</p>
-    <button @click="onAddItem">添加 item</button>
+    <p>当前数值为：{{ selectedIndex }}</p>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, isProxy, isRef, onMounted, reactive, ref, toRef, toRefs, unref, watch, watchEffect } from 'vue'
+import {
+  createApp,
+  defineAsyncComponent,
+  computed,
+  defineComponent,
+  getCurrentInstance,
+  isProxy,
+  isRef,
+  onMounted,
+  reactive,
+  ref,
+  toRef,
+  toRefs,
+  unref,
+  watch,
+  Ref,
+  watchEffect,
+} from "vue"
 
-interface TabItem {
-  id: number
-  value: string
+
+interface ITab {
+  selectedIndex: Ref<number>
+  list: Array<{
+    id: number
+    value: string
+  }>
+  onClickTab(index: number): void
 }
+
 
 export default defineComponent({
   setup() {
-    const selectedIndex = ref(0)
-    const list: Array<TabItem> = reactive([{
-      id: 0,
-      value: '1'
-    }, {
-      id: 1,
-      value: '2'
-    }, {
-      id: 100,
-      value: '3'
-    }])
-    const onClickTab = (index) => {
-      selectedIndex.value = index
-    }
-    const onAddItem = () => {
-      let value = Math.random()
-      list.unshift({id: value, value: value.toString().slice(-8)})
-    }
+    const selectedIndex: ITab['selectedIndex'] = ref(0);
+    const list: ITab['list'] = reactive([
+      {
+        id: 0,
+        value: "1",
+      },
+      {
+        id: 1,
+        value: "2",
+      },
+      {
+        id: 100,
+        value: "3",
+      },
+      {
+        id: 200,
+        value: '100'
+      }
+    ])
+
+    const onClickTab: ITab['onClickTab']  = (index) => {
+      selectedIndex.value = 11;
+    };
+
     return {
       selectedIndex,
-      list,
       onClickTab,
-      onAddItem,
-    }
-  }
-})
+      list
+    };
+  },
+});
 </script>
 
 <style scoped>
-li{
+li {
   cursor: pointer;
   margin: 30px;
   border: 1px dashed currentColor;
 }
-li.selected{
+li.selected {
   color: hotpink;
 }
-li::marker{
+li::marker {
   font-size: 30px;
   content: "√";
 }
