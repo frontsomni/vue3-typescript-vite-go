@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import App from './App.vue'
 import Tab from './components/Tab.vue'
 import Copy from './components/Copy.vue';
