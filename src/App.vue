@@ -1,10 +1,8 @@
 <template>
-  <!-- <HelloWorld msg="Vite" /> -->
-  <!-- <Tab /> -->
   <div>
     <h3>Home</h3>
     <router-view class="full-screen"></router-view>
-    <router-link to="/tab">Go to Tab</router-link>
+    <p><router-link to="/tab">Go to Tab</router-link></p>
     <p>
       <router-link to="/copy">Go to Copy</router-link>
     </p>

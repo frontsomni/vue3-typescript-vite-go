@@ -3,6 +3,7 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 import App from './App.vue'
 import Tab from './components/Tab.vue'
 import Copy from './components/Copy.vue';
+import HelloWorld from './components/HelloWorld.vue'
 import './index.css'
 
 const routes = [{
@@ -11,6 +12,9 @@ const routes = [{
 }, {
   path: '/copy',
   component: Copy
+}, {
+  path: '/',
+  component: HelloWorld,
 }]
 
 const router = createRouter({
