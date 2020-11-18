@@ -1,17 +1,33 @@
 <template>
-  <HelloWorld msg="Vite" />
-  <Tab />
+  <!-- <HelloWorld msg="Vite" /> -->
+  <!-- <Tab /> -->
+  <div>
+    <h3>Home</h3>
+    <router-view class="full-screen"></router-view>
+    <router-link to="/tab">Go to Tab</router-link>
+    <p>
+      <router-link to="/copy">Go to Copy</router-link>
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Tab from './components/Tab.vue'
 
-export default {
+import { defineComponent } from "vue"
+
+export default defineComponent({
   name: 'App',
-  components: {
-    HelloWorld,
-    Tab
-  }
-}
+})
 </script>
+
+
+<style scoped>
+.full-screen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 100%;
+  background: #fff;
+}
+</style>

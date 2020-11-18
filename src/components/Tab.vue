@@ -46,6 +46,7 @@ interface ITab {
 
 
 export default defineComponent({
+  name: 'tab',
   setup() {
     const selectedIndex: ITab['selectedIndex'] = ref(0);
     const list: ITab['list'] = reactive([
@@ -68,7 +69,7 @@ export default defineComponent({
     ])
 
     const onClickTab: ITab['onClickTab']  = (index) => {
-      selectedIndex.value = 11;
+      selectedIndex.value = index;
     };
 
     return {
