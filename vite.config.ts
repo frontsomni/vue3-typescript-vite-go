@@ -1,5 +1,5 @@
 export default {
-  base: '',
+  base: './',
   esbuildTarget: 'es2015',
-  assetsDir: 'assets'
+  // assetsDir: 'assets'
 }
