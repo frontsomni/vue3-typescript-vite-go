@@ -1,5 +1,5 @@
 # vite + vue3 + typescript
-vite： vue3 脚手架
+示例 demo
 
 ### 参考文档
 * vue3：https://v3.vuejs.org/api/computed-watch-api.html#computed
@@ -7,12 +7,9 @@ vite： vue3 脚手架
 * composition-api：https://composition-api.vuejs.org/zh/api.html#setup
 * 迁移至 vue3：https://v3.vuejs.org/guide/migration/introduction.html
 
-### vue3 简说
-* 项目起步
-* 常用 api
-* ref VS reactive
 
-### 目标
-* javascript - typescript
-* vue2 -> vue3
-* webpack vue  -> vite vue
+### Travis CI 自动化部署
+* 使用 `docs.travis-ci.com` .com 域名 非 .org （后者太慢)
+* `git push` 后自动触发部署
+* vite `_assets` 资源目录要改为 `assets` 因为 `GitHub Pages` 404 报错
+* 部署地址： https://yuelau.github.io/vue3-typescript-vite-go/#/
